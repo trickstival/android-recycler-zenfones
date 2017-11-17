@@ -1,5 +1,6 @@
 package com.recycler.patrick.recyclerpatrick;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,13 +15,13 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-
+    public void goToCadastrarZenfone(View btnView){
+        startActivity(new Intent(this, CadastrarZenfoneActivity.class));
+    }
 }

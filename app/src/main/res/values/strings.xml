@@ -4,4 +4,20 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="login">Login</string>
     <string name="Cadastrar">Cadastrar Guitarra</string>
+    <string name="nome_zenfone">Nome do Zenfone</string>
+    <string name="ano_do_zenfone">Ano do Zenfone</string>
+    <string name="modelo">Modelo</string>
+
+    <string-array name="zenfones">
+        <item>Zenfone 5</item>
+        <item>Zenfone 6</item>
+        <item>Zenfone 2</item>
+        <item>Zenfone 3</item>
+        <item>Zenfone 4</item>
+        <item>Zenfone Selfie</item>
+        <item>Zenfone Go</item>
+        <item>Zenfone Zoom</item>
+        <item>Zenfone Laser</item>
+    </string-array>
+
 </resources>
