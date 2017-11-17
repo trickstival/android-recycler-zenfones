@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Recycler Patrick</string>
+    <string name="email">E-mail</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="login">Login</string>
+    <string name="Cadastrar">Cadastrar Guitarra</string>
+</resources>
