@@ -1,10 +1,12 @@
 package com.recycler.patrick.recyclerpatrick.model;
 
+import java.io.Serializable;
+
 /**
  * Created by trickstival on 23/11/17.
  */
 
-public class Zenfone {
+public class Zenfone implements Serializable {
 
     private String nome, modelo, key;
     private Integer ano;

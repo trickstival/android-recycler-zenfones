@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CadastrarZenfoneActivity"></activity>
+        <activity android:name=".CadastrarZenfoneActivity" />
+        <activity android:name=".AlterarZenfoneActivity"></activity>
     </application>
 
 </manifest>

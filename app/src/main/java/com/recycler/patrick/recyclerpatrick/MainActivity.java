@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -53,9 +54,12 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.v("AQUIIIIIIIIIIIIIIIII", "n existe");
 
+                zenfones.clear();
+
                 for(DataSnapshot snapZ : dataSnapshot.getChildren()){
                     if(snapZ.exists()) {
                         Zenfone zenzen = snapZ.getValue(Zenfone.class);
+                        zenzen.setKey(snapZ.getKey());
                         Log.v("AQUIIIIIIIIIIIIIIIII", "AQUI EXISTEE " + zenzen.getKey() + " " + zenzen.getNome());
                         zenfones.add(zenzen);
                         zenfoneAdapter.notifyDataSetChanged();
@@ -73,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Iniciando os controladores
     private void initControladores(){
-        zenfoneAdapter = new ZenfoneAdapter(zenfones);
+        zenfoneAdapter = new ZenfoneAdapter(zenfones, this);
     }
 
     //Iniciando os componentes
@@ -89,4 +93,5 @@ public class MainActivity extends AppCompatActivity {
     public void goToCadastrarZenfone(View btnView){
         startActivity(new Intent(this, CadastrarZenfoneActivity.class));
     }
+
 }

@@ -75,12 +75,9 @@ public class CadastrarZenfoneActivity extends AppCompatActivity {
 
         String zenfoneKey = zenfoneRef.push().getKey();
 
-        zenfoneRef.child(zenfoneKey).setValue(novoZenfone).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Toast.makeText(CadastrarZenfoneActivity.this, "Zenfone cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
-                finish();
-            }
+        zenfoneRef.child(zenfoneKey).setValue(novoZenfone).addOnSuccessListener(aVoid -> {
+            Toast.makeText(CadastrarZenfoneActivity.this, "Zenfone cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+            finish();
         });
 
     }

@@ -8,8 +8,8 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
-        android:layout_width="53dp"
-        android:layout_height="66dp"
+        android:layout_width="63dp"
+        android:layout_height="76dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -17,7 +17,7 @@
         android:focusable="true"
         android:onClick="goToCadastrarZenfone"
         app:backgroundTint="@android:color/holo_green_light"
-        app:fabSize="normal"
+        app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
