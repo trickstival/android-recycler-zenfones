@@ -52,11 +52,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.v("AQUIIIIIIIIIIIIIIIII", "n existe");
-                if(dataSnapshot.exists()) {
-                    zenfones.add(dataSnapshot.getValue(Zenfone.class));
-                    zenfoneAdapter.notifyDataSetChanged();
-                    Log.v("AQUIIIIIIIIIIIIIIIII", dataSnapshot.getValue(Zenfone.class).getKey());
+
+                for(DataSnapshot snapZ : dataSnapshot.getChildren()){
+                    if(snapZ.exists()) {
+                        Zenfone zenzen = snapZ.getValue(Zenfone.class);
+                        Log.v("AQUIIIIIIIIIIIIIIIII", "AQUI EXISTEE " + zenzen.getKey() + " " + zenzen.getNome());
+                        zenfones.add(zenzen);
+                        zenfoneAdapter.notifyDataSetChanged();
+                    }
                 }
+
             }
 
             @Override

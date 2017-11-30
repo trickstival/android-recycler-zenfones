@@ -26,7 +26,6 @@ public class ZenfoneAdapter extends RecyclerView.Adapter<ZenfoneAdapter.ZenfoneV
 
     @Override
     public ZenfoneViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        FirebaseDatabase.getInstance("a");
         return new ZenfoneViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.zenfone_recycler_item, parent, false));
     }
 

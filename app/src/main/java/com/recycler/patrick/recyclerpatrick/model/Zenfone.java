@@ -9,6 +9,10 @@ public class Zenfone {
     private String nome, modelo, key;
     private Integer ano;
 
+    public Zenfone(){
+
+    }
+
     public Zenfone(String nome, Integer ano, String modelo) {
         this.nome = nome;
         this.ano = ano;
